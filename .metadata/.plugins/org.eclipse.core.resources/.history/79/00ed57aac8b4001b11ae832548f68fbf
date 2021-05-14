@@ -1,0 +1,5 @@
+package com.needle.demoApi.repository;
+
+public class AuthorRepositoryTest {
+
+}

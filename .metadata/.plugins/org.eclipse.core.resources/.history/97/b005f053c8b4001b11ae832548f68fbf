@@ -1,0 +1,14 @@
+package com.needle.demoApi.services;
+
+import com.needle.demoApi.model.Author;
+
+public class AuthorService {
+
+	public Author saveAuthor(Author any) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

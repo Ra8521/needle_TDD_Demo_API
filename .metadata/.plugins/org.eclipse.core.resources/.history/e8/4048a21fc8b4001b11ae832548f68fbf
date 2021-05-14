@@ -1,0 +1,11 @@
+package com.needle.demoApi.repository;
+import org.springframework.data.repository.CrudRepository;
+
+import com.needle.demo.model.Author;
+public class AuthorRepository extends CrudRepository<Author,Long>{
+
+
+	Author findByBookIdentifier(String bookIdentifier);
+	public Author findByName(String string) ;
+
+}

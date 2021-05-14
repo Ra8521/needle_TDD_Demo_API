@@ -7,6 +7,13 @@ public class Author {
 	private String bookIdentifier;
 	private String name;
 	private String bookName;
+	
+	public Author() {
+		
+	}
+	public Author(String string, String string2, String string3) {
+		// TODO Auto-generated constructor stub
+	}
 	public Long getId() {
 		return Id;
 	}
