@@ -168,3 +168,15 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jdt.junit 4 0 2021-05-14 20:30:36.832
 !MESSAGE No tests found with test runner 'JUnit 5'.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-14 20:36:49.838
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cDMfZVGO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-14 20:36:49.839
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.cDMfZVGO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-14 20:36:49.840
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-14 20:36:49.841
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cDMfZVGO => OK
