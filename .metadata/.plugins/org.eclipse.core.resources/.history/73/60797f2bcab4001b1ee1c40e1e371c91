@@ -4,30 +4,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-//import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 @Entity
 @Table(name = "Book")
 public class Author {
 	
-	@Id
-	@GeneratedValue
-	private Long Id;
 	
-	 @Column
-	private String authorIdentifier;
-	 @Column
+	private Long Id;
+	private String bookIdentifier;
 	private String name;
-	 @Column
 	private String bookName;
 	
 	public Author() {
 		
 	}
-	public Author(String authorIdentifier, String name, String bookName) {
+	public Author(String string, String string2, String string3) {
 		// TODO Auto-generated constructor stub
-		this.authorIdentifier=authorIdentifier;
-		this.name = name;
-		this.bookName = bookName;
 	}
 	public Long getId() {
 		return Id;
@@ -35,12 +27,11 @@ public class Author {
 	public void setId(Long id) {
 		Id = id;
 	}
-	
-	public String getAuthorIdentifier() {
-		return authorIdentifier;
+	public String getBookIdentifier() {
+		return bookIdentifier;
 	}
-	public void setAuthorIdentifier(String authorIdentifier) {
-		this.authorIdentifier = authorIdentifier;
+	public void setBookIdentifier(String bookIdentifier) {
+		this.bookIdentifier = bookIdentifier;
 	}
 	public String getName() {
 		return name;

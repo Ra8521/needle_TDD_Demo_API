@@ -56,7 +56,7 @@ public class AuthorControllerTest {
 		
 		Author mockAuthor = new Author();
 		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier("102");
+		mockAuthor.setBookIdentifier("102");
 		mockAuthor.setBookName("2-state");
 		mockAuthor.setName("Chetan Bhaghat");
 		String inputInJson = this.mapToJson(mockAuthor);

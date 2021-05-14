@@ -36,12 +36,6 @@ public class Author {
 		Id = id;
 	}
 	
-	public String getAuthorIdentifier() {
-		return authorIdentifier;
-	}
-	public void setAuthorIdentifier(String authorIdentifier) {
-		this.authorIdentifier = authorIdentifier;
-	}
 	public String getName() {
 		return name;
 	}

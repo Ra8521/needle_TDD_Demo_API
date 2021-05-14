@@ -23,9 +23,9 @@ public class Author {
 	public Author() {
 		
 	}
-	public Author(String authorIdentifier, String name, String bookName) {
+	public Author(String bookIdentifier, String name, String bookName) {
 		// TODO Auto-generated constructor stub
-		this.authorIdentifier=authorIdentifier;
+		this.bookIdentifier=bookIdentifier;
 		this.name = name;
 		this.bookName = bookName;
 	}
@@ -35,12 +35,11 @@ public class Author {
 	public void setId(Long id) {
 		Id = id;
 	}
-	
-	public String getAuthorIdentifier() {
-		return authorIdentifier;
+	public String getBookIdentifier() {
+		return bookIdentifier;
 	}
-	public void setAuthorIdentifier(String authorIdentifier) {
-		this.authorIdentifier = authorIdentifier;
+	public void setBookIdentifier(String bookIdentifier) {
+		this.bookIdentifier = bookIdentifier;
 	}
 	public String getName() {
 		return name;
