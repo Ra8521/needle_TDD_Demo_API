@@ -1,0 +1,9 @@
+package com.needle.demoApi.exception;
+
+public class AuthorIdException extends RuntimeException{
+	
+	public AuthorIdException(String message) {
+		super(message);
+	}
+
+}

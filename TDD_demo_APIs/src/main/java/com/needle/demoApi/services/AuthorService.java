@@ -1,5 +1,6 @@
 package com.needle.demoApi.services;
 
+import com.needle.demoApi.exception.AuthorIdException;
 import com.needle.demoApi.model.Author;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,12 +16,20 @@ import com.needle.demoApi.repository.AuthorRepository;
 
 @Service
 public class AuthorService {
-		
-	public Author saveAuthor(Author any) {
+	@Autowired
+	private AuthorRepository authorRepository;
+	public Author saveAuthor(Author author) {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
+		try {
+			
+			return authorRepository.save(author);
+		}
+		catch(Exception ex) {
+			
+			throw new AuthorIdException("Author identifier: "+author.getAuthorIdentifier()+" already exist");
+		}
 	
-
+	}
+	
+	
 }
