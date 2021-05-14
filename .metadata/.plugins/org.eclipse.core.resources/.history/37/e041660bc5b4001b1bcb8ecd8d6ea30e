@@ -1,0 +1,11 @@
+package com.needle.demoApi.model;
+
+public class Author {
+	
+	
+	private Long Id;
+	private String bookIdentifier;
+	private String name;
+	private String bookName;
+
+}
