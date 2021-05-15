@@ -107,13 +107,13 @@ public class AuthorControllerTest {
 
 		Author mockAuthor = new Author();
 		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier("102");
+		mockAuthor.setBookIdentifier("102");
 		mockAuthor.setBookName("2-state");
 		mockAuthor.setName("Chetan Bhaghat");
 		
 		Author mockAuthor2 = new Author();
 		mockAuthor.setId((long)104);
-		mockAuthor.setAuthorIdentifier("1023");
+		mockAuthor.setBookIdentifier("1023");
 		mockAuthor.setBookName("Halmet");
 		mockAuthor.setName("william ");
 		
@@ -121,7 +121,7 @@ public class AuthorControllerTest {
 		authorList.add(mockAuthor);
 		authorList.add(mockAuthor2);
 		
-		Mockito.when(authorService.getAllAuthorInfo()).thenReturn(authorList);
+		Mockito.when(bookService.getAllAuthorInfo()).thenReturn(authorList);
 		
 		String URI = "/author/allauthor";
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(

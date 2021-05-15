@@ -30,14 +30,6 @@ public class AuthorService {
 		}
 	
 	}
-	public Object findAuthorByIdentifier(String anyString) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public Object getAllAuthorInfo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	
 }

@@ -121,7 +121,7 @@ public class AuthorControllerTest {
 		authorList.add(mockAuthor);
 		authorList.add(mockAuthor2);
 		
-		Mockito.when(authorService.getAllAuthorInfo()).thenReturn(authorList);
+		Mockito.when(bookService.getAllAuthorInfo()).thenReturn(authorList);
 		
 		String URI = "/author/allauthor";
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(

@@ -79,65 +79,6 @@ public class AuthorControllerTest {
 		assertEquals(201, response.getStatus());
 	}
 	
-	
-	@Test
-	public void testgetAuthorById() throws Exception {
-		Author mockAuthor = new Author();
-		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier("102");
-		mockAuthor.setBookName("2-state");
-		mockAuthor.setName("Chetan Bhaghat");
-		String inputInJson = this.mapToJson(mockAuthor);
-		//Mockito.when(bookService.saveAuthor(Mockito.any(Author.class))).thenReturn(mockAuthor);
-		String URI = "/author/102";
-		Mockito.when(authorService.findAuthorByIdentifier(Mockito.anyString())).thenReturn(mockAuthor);
-		
-		
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
-				URI);
-
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-		String expectedJson = this.mapToJson(mockAuthor);
-		String outputInJson = result.getResponse().getContentAsString();
-		assertThat(outputInJson).isEqualTo(expectedJson);
-	}
-	
-	@Test
-	public void testgetAuthorinfo() throws Exception {
-
-		Author mockAuthor = new Author();
-		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier("102");
-		mockAuthor.setBookName("2-state");
-		mockAuthor.setName("Chetan Bhaghat");
-		
-		Author mockAuthor2 = new Author();
-		mockAuthor.setId((long)104);
-		mockAuthor.setAuthorIdentifier("1023");
-		mockAuthor.setBookName("Halmet");
-		mockAuthor.setName("william ");
-		
-		List<Author> authorList = new ArrayList<>();
-		authorList.add(mockAuthor);
-		authorList.add(mockAuthor2);
-		
-		Mockito.when(authorService.getAllAuthorInfo()).thenReturn(authorList);
-		
-		String URI = "/author/allauthor";
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
-				URI).accept(
-						"application/json");
-
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-
-		String expectedJson = this.mapToJson(authorList);
-		String outputInJson = result.getResponse().getContentAsString();
-		assertThat(outputInJson).isEqualTo(expectedJson);
-	}
-	
-	
-	
-	
 	/**
 	 * Maps an Object into a JSON String. Uses a Jackson ObjectMapper.
 	 */
