@@ -175,7 +175,8 @@ public class AuthorControllerTest {
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 		MockHttpServletResponse response = result.getResponse();
 		assertEquals(200, response.getStatus());
-		
+		String content = result.getResponse().getContentAsString();
+		assertEquals(content, "Book & author detail with id: "+authorIdentifier + " is deleted");
 	}
 	
 	/**

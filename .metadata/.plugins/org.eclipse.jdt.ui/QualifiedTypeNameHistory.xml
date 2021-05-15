@@ -7,4 +7,8 @@
     <fullyQualifiedTypeName name="com.needle.demoApi.model.Author"/>
     <fullyQualifiedTypeName name="org.springframework.boot.test.mock.mockito.MockBean"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.mockito.InjectMocks"/>
+    <fullyQualifiedTypeName name="org.mockito.Mock"/>
+    <fullyQualifiedTypeName name="org.mockito.Matchers"/>
+    <fullyQualifiedTypeName name="org.hamcrest.Matchers"/>
 </qualifiedTypeNameHistroy>

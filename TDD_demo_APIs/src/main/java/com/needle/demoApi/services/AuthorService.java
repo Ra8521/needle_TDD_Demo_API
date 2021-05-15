@@ -48,10 +48,16 @@ public class AuthorService {
 		return ((Collection<Author>) authorDataList).stream().collect(Collectors.toList());
 	}
 
-	public Object deleteAuthorByIdentifier(String anyString) {
+	public String deleteAuthorByIdentifier(String authorIdentifier) {
 		// TODO Auto-generated method stub
-		return null;
+		Author author = authorRepository.findByAuthorIdentifier(authorIdentifier);
+		if(author==null) {
+			throw new AuthorIdException("Book and author with Id: "+authorIdentifier+" does not exist");
+		}
+		authorRepository.delete(author);
+		return "deleted "+authorIdentifier+" successfully";
 	}
+	
 	
 	
 }

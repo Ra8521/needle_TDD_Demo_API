@@ -49,5 +49,11 @@ public class AuthorController {
 	    public ResponseEntity<?> getAuthorById(@PathVariable("authorIdentifier") String authorIdentifier){
 	    	return new ResponseEntity<Author>(authorService.findAuthorByIdentifier(authorIdentifier), HttpStatus.OK);
 	    }
-
+	
+		
+		@DeleteMapping("/{authorIdentifier}")
+	    public ResponseEntity<?> deleteAuthorById(@Validated @PathVariable String authorIdentifier){
+			authorService.deleteAuthorByIdentifier(authorIdentifier);
+	    	return new ResponseEntity<String>("Book & author detail with id: "+authorIdentifier + " is deleted", HttpStatus.OK);
+	    }
 }
