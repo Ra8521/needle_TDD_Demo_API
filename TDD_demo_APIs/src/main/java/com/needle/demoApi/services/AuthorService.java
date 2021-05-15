@@ -57,7 +57,25 @@ public class AuthorService {
 		authorRepository.delete(author);
 		return "deleted "+authorIdentifier+" successfully";
 	}
-	
+
+	public Author updateAuthor(Author author) {
+		// TODO Auto-generated method stub
+		try {
+			Author author1 =   authorRepository.findByAuthorIdentifier(author.getAuthorIdentifier());
+			if(author1!=null) {
+				author1.setBookName(author.getBookName());
+				author1.setName(author.getName());
+				return authorRepository.save(author1);
+			}
+			else {
+				throw new AuthorIdException("Book and author with Id: "+author.getAuthorIdentifier()+" does not exist");
+			}
+		 }
+		 catch(Exception ex) {
+				throw new AuthorIdException("Book identifier: "+author.getAuthorIdentifier()+" already exist");
+			}
+			
+	}
 	
 	
 }

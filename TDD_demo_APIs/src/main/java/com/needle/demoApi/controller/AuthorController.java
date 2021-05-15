@@ -49,6 +49,13 @@ public class AuthorController {
 	    public ResponseEntity<?> getAuthorById(@PathVariable("authorIdentifier") String authorIdentifier){
 	    	return new ResponseEntity<Author>(authorService.findAuthorByIdentifier(authorIdentifier), HttpStatus.OK);
 	    }
+		
+		 @PutMapping(  consumes = "application/json",produces = "application/json")
+			public ResponseEntity<?> updateAuthor(@RequestBody Author author){
+				
+				Author author1 = authorService.updateAuthor(author);
+		    	return new ResponseEntity<Author>(author1, HttpStatus.OK);
+		    }
 	
 		
 		@DeleteMapping("/{authorIdentifier}")
