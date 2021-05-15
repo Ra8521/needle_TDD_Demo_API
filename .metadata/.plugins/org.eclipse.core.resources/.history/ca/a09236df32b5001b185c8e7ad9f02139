@@ -135,24 +135,6 @@ public class AuthorControllerTest {
 		assertThat(outputInJson).isEqualTo(expectedJson);
 	}
 	
-	@Test
-	public void testupdateAuthor() throws Exception {
-	   
-		Author mockAuthor = new Author();
-		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier("102");
-		mockAuthor.setBookName("2-state");
-		mockAuthor.setName("Chetan Bhaghat");
-	   String uri = "/author";
-	   String inputJson = this.mapToJson(mockAuthor);
-	   MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri)
-	      .contentType("application/json").content(inputJson)).andReturn();
-	   
-	   int status = mvcResult.getResponse().getStatus();
-	   assertEquals(200, status);
-	   String content = mvcResult.getResponse().getContentAsString();
-	   assertEquals(content, "Product is updated successsfully");
-	}
 	
 	@Test
 	public void testdeleteAuthorById() throws Exception {

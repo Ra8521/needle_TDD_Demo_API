@@ -135,38 +135,20 @@ public class AuthorControllerTest {
 		assertThat(outputInJson).isEqualTo(expectedJson);
 	}
 	
-	@Test
-	public void testupdateAuthor() throws Exception {
-	   
-		Author mockAuthor = new Author();
-		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier("102");
-		mockAuthor.setBookName("2-state");
-		mockAuthor.setName("Chetan Bhaghat");
-	   String uri = "/author";
-	   String inputJson = this.mapToJson(mockAuthor);
-	   MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri)
-	      .contentType("application/json").content(inputJson)).andReturn();
-	   
-	   int status = mvcResult.getResponse().getStatus();
-	   assertEquals(200, status);
-	   String content = mvcResult.getResponse().getContentAsString();
-	   assertEquals(content, "Product is updated successsfully");
-	}
 	
 	@Test
 	public void testdeleteAuthorById() throws Exception {
-		String authorIdentifier="102";
+		String bookIdentifier="102";
 		Author mockAuthor = new Author();
 		mockAuthor.setId((long)101);
-		mockAuthor.setAuthorIdentifier(authorIdentifier);
+		mockAuthor.setBookIdentifier(bookIdentifier);
 		mockAuthor.setBookName("2-state");
 		mockAuthor.setName("Chetan Bhaghat");
 		String inputInJson = this.mapToJson(mockAuthor);
 		//Mockito.when(bookService.saveAuthor(Mockito.any(Author.class))).thenReturn(mockAuthor);
 		String URI = "/author/102";
 		String res=null;;
-		Mockito.when(authorService.deleteAuthorByIdentifier(Mockito.anyString())).thenReturn(res);
+		Mockito.when(bookService.deleteBookByIdentifier(Mockito.anyString())).thenReturn(res);
 		
 		
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.delete(

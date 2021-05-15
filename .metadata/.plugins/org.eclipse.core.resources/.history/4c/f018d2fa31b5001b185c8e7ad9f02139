@@ -47,11 +47,6 @@ public class AuthorService {
 		Iterable<Author> authorDataList = authorRepository.findAll();
 		return ((Collection<Author>) authorDataList).stream().collect(Collectors.toList());
 	}
-
-	public Object deleteAuthorByIdentifier(String anyString) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	
 }

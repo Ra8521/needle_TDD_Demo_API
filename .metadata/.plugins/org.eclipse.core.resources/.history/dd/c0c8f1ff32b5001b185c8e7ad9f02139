@@ -144,9 +144,9 @@ public class AuthorControllerTest {
 		mockAuthor.setBookName("2-state");
 		mockAuthor.setName("Chetan Bhaghat");
 	   String uri = "/author";
-	   String inputJson = this.mapToJson(mockAuthor);
-	   MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri)
-	      .contentType("application/json").content(inputJson)).andReturn();
+	   String inputJson = super.mapToJson(product);
+	   MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.put(uri)
+	      .contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
 	   
 	   int status = mvcResult.getResponse().getStatus();
 	   assertEquals(200, status);
