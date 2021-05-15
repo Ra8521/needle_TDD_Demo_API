@@ -32,7 +32,6 @@ public class AuthorService {
 		}
 	
 	}
-	
 	public Author findAuthorByIdentifier(String authorIdentifier) {
 		// TODO Auto-generated method stub
 		Author author =   authorRepository.findByAuthorIdentifier(authorIdentifier);
@@ -42,7 +41,6 @@ public class AuthorService {
 		}
 		return author;
 	}
-	
 	public List<Author> getAllAuthorInfo() {
 		Iterable<Author> authorDataList = authorRepository.findAll();
 		return ((Collection<Author>) authorDataList).stream().collect(Collectors.toList());

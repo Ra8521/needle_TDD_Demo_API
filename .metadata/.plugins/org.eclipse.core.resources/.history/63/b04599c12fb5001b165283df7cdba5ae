@@ -32,17 +32,10 @@ public class AuthorService {
 		}
 	
 	}
-	
-	public Author findAuthorByIdentifier(String authorIdentifier) {
+	public Author findAuthorByIdentifier(String anyString) {
 		// TODO Auto-generated method stub
-		Author author =   authorRepository.findByAuthorIdentifier(authorIdentifier);
-		
-		if(author==null) {
-			throw new AuthorIdException("Project id: "+authorIdentifier+" does not exist");
-		}
-		return author;
+		return null;
 	}
-	
 	public List<Author> getAllAuthorInfo() {
 		Iterable<Author> authorDataList = authorRepository.findAll();
 		return ((Collection<Author>) authorDataList).stream().collect(Collectors.toList());

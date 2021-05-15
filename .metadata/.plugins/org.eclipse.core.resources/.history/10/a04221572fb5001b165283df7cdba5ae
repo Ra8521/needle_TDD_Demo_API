@@ -45,9 +45,9 @@ public class AuthorController {
 			return authorService.getAllAuthorInfo();
 		}
 		
-		@GetMapping(value = "/{authorIdentifier}",  produces = "application/json")
-	    public ResponseEntity<?> getAuthorById(@PathVariable("authorIdentifier") String authorIdentifier){
-	    	return new ResponseEntity<Author>(authorService.findAuthorByIdentifier(authorIdentifier), HttpStatus.OK);
+		@GetMapping(value = "/{bookIdentifier}",  produces = "application/json")
+	    public ResponseEntity<?> getAuthorById(@PathVariable("bookIdentifier") String bookIdentifier){
+	    	return new ResponseEntity<Author>(bookService.findBookByIdentifier(bookIdentifier), HttpStatus.OK);
 	    }
 
 }

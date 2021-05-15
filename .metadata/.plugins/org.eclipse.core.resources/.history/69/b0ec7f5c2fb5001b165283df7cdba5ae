@@ -16,10 +16,8 @@ import com.needle.demoApi.repository.AuthorRepository;
 
 @Service
 public class AuthorService {
-	
 	@Autowired
 	private AuthorRepository authorRepository;
-	
 	public Author saveAuthor(Author author) {
 		// TODO Auto-generated method stub
 		try {
@@ -32,20 +30,13 @@ public class AuthorService {
 		}
 	
 	}
-	
-	public Author findAuthorByIdentifier(String authorIdentifier) {
+	public Object findAuthorByIdentifier(String anyString) {
 		// TODO Auto-generated method stub
-		Author author =   authorRepository.findByAuthorIdentifier(authorIdentifier);
-		
-		if(author==null) {
-			throw new AuthorIdException("Project id: "+authorIdentifier+" does not exist");
-		}
-		return author;
+		return null;
 	}
-	
 	public List<Author> getAllAuthorInfo() {
-		Iterable<Author> authorDataList = authorRepository.findAll();
-		return ((Collection<Author>) authorDataList).stream().collect(Collectors.toList());
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
